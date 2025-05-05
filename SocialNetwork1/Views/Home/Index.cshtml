@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-11"></div>
+    <div class="col-md-1">
+        <a href="/account/logout" class="btn btn-outline-warning">Log Out</a>
+    </div>
+</div>
+
+<div id="alert" class="alert alert-success" role="alert" style="display:none;"></div>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @ViewBag.User.UserName</h1>
+    <img  src="images/@ViewBag.User.Image" style="width:100px;height:100px;border-radius:50%;"/>
+</div>
+
+
+<div class="row">
+    <div id="allUsers" class="col-md-4" style="display:flex;flex-direction:row;justify-content:space-between;"></div>
+    <div class="col-md-4">
+        <div id="friends"></div>
+    </div>
+    <div class="col-md-4">
+        <div id="requests"></div>
+    </div>
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="~/js/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+<script src="~/js/chat.js" asp-append-version="true"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
